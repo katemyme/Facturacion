@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 @Embeddable
 @Getter @Setter
-public class Dirreccion {
+public class Direccion {
 
     @Column(length = 30)
     String ViaPublica;
