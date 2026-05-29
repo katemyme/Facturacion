@@ -7,6 +7,7 @@ import org.openxava.calculators.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
 import ni.edu.uam.Facturacion.calculadores.CalculadorSiguienteNumeroParaAnyo;
 
@@ -46,4 +47,10 @@ public class Factura {
             optional = false
     )
     private Cliente cliente;
+
+    @ElementCollection
+    @ListProperties(
+            "producto.numero, producto.descripcion, cantidad"
+    )
+    private Collection<Detalle> detalles;
 }
