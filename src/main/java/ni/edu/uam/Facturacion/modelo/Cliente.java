@@ -16,6 +16,7 @@ public class Cliente {
     String nombre;
 
     @Embedded
+    @NoFrame
     Direccion direccion;
 }
 
