@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.Collection;
 
 import ni.edu.uam.Facturacion.calculadores.CalculadorSiguienteNumeroParaAnyo;
-
+@Entity
 @View(
         members =
                 "anyo, numero, fecha;" +
@@ -18,7 +18,7 @@ import ni.edu.uam.Facturacion.calculadores.CalculadorSiguienteNumeroParaAnyo;
                         "detalles;" +
                         "observaciones"
 )
-@Entity
+
 @Getter @Setter
 public class Factura {
 
@@ -52,6 +52,7 @@ public class Factura {
             fetch = FetchType.LAZY,
             optional = false
     )
+    @ReferenceView("Simple")
     private Cliente cliente;
 
     @ElementCollection
