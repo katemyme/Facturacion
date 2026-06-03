@@ -1,5 +1,6 @@
 package ni.edu.uam.Facturacion.modelo;
 
+import java.util.Collection;
 import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -24,4 +25,10 @@ public class Autor {
     @Column(length=50)
     @Required
     private String nombre;
+
+    @OneToMany(mappedBy="autor")
+    @ListProperties(
+            "id, descripcion, precio"
+    )
+    private Collection<Producto> productos;
 }
