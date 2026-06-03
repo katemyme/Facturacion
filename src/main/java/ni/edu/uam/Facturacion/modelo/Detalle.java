@@ -14,6 +14,5 @@ public class Detalle {
             fetch = FetchType.LAZY,
             optional = true
     )
-    @DescriptionsList
     private Producto producto;
 }

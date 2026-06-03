@@ -41,7 +41,6 @@ public class Factura {
 
     @TextArea
     String observaciones;
-
     @ManyToOne(
             fetch = FetchType.LAZY,
             optional = false
@@ -50,7 +49,8 @@ public class Factura {
 
     @ElementCollection
     @ListProperties(
-            "producto.numero, producto.descripcion, cantidad"
+            "producto.id, producto.descripcion, cantidad"
+
     )
     private Collection<Detalle> detalles;
 }
