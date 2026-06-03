@@ -11,6 +11,13 @@ import java.util.Collection;
 
 import ni.edu.uam.Facturacion.calculadores.CalculadorSiguienteNumeroParaAnyo;
 
+@View(
+        members =
+                "anyo, numero, fecha;" +
+                        "cliente;" +
+                        "detalles;" +
+                        "observaciones"
+)
 @Entity
 @Getter @Setter
 public class Factura {
